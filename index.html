@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Highlight Boxes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s;
+    }
+
+    .highlighted {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="box highlighted" id="box">A</div>
+  <div class="box" id="box">B</div>
+  <div class="box" id="box">C</div>
+  <div class="box" id="box">D</div>
+
+
+  <script>
+    const boxes = document.querySelectorAll('.box');
+
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('highlighted');
+      });
+    });
+  </script>
+</body>
+</html>
