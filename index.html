@@ -1118,121 +1118,54 @@ h1 .emoji-icon {
     box-shadow: 0 8px 25px rgba(155, 89, 182, 0.4);
 }
 
+
+
+
+
+
+
 @media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    
     body {
-        padding: 8px;
-        font-size: 15px;
+        padding: 5px;
+        font-size: 16px;
+        overflow-x: auto;
     }
     
     .container {
-        padding: 12px;
-        border-radius: 12px;
+        padding: 15px;
+        border-radius: 15px;
+        min-width: 800px; /* Forces desktop-like width */
     }
     
     h1 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
+        font-size: 2em;
+        margin-bottom: 20px;
     }
     
     h2 {
         font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 12px;
     }
     
-    h3 {
-        font-size: 1.1em;
-        margin: 15px 0 10px 0;
-    }
-    
-    .page-subtitle {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-    
-    /* Grids optimized for mobile - 2 columns where possible */
-    .player-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    .player-inputs-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .role-assignments-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-    
+    /* All your grid/layout styles - keep these */
+    .player-grid,
+    .player-inputs-grid,
+    .role-assignments-grid,
     .role-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 12px;
     }
     
     .player-select {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     }
     
-    .night-player-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    /* Player items - slightly smaller but still readable */
-    .player-item,
-    .night-player-item {
-        padding: 12px;
-        font-size: 13px;
-        min-height: 44px; /* Touch target minimum */
-    }
-    
-    .player-role-item {
-        padding: 12px;
-        min-height: 120px;
-    }
-    
-    /* Role items */
-    .role-item {
-        padding: 15px 12px;
-    }
-    
-    .role-name {
-        font-size: 14px;
-        margin-bottom: 12px;
-    }
-    
-    .role-name .farsi-subtitle {
-        font-size: 0.9em;
-    }
-    
-    /* Counter buttons - touch-friendly */
-    .counter-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 20px;
-    }
-    
-    .counter-value {
-        font-size: 18px;
-        padding: 6px 10px;
-    }
-    
-    /* Bullet squares side by side on mobile */
     .bullet-squares {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-    
-    .bullet-square {
-        min-height: 90px;
-    }
-    
-    .bullet-label-top {
-        font-size: 14px;
-        margin-bottom: 8px;
+        gap: 15px;
     }
 
     .bullet-buttons {
@@ -1240,287 +1173,54 @@ h1 .emoji-icon {
         gap: 10px;
     }
     
-    .bullet-button {
-        padding: 12px 20px;
-        font-size: 14px;
-        min-width: 120px;
-        min-height: 44px;
+    .night-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 3px;
     }
     
-    /* Tabs - horizontal scroll with proper touch targets */
-    .night-tabs,
-    .special-ability-tabs {
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        padding: 8px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-    }
-    
-    .night-tabs::-webkit-scrollbar,
-    .special-ability-tabs::-webkit-scrollbar {
-        height: 6px;
-    }
-    
-    .night-tabs::-webkit-scrollbar-thumb,
-    .special-ability-tabs::-webkit-scrollbar-thumb {
-        background: rgba(52, 152, 219, 0.5);
-        border-radius: 3px;
-    }
-    
-    .night-tab,
-    .special-ability-tab {
+    .night-tab {
+        margin: 2px;
+        border-radius: 8px;
         padding: 12px 16px;
         font-size: 13px;
-        margin: 0 4px;
-        flex-shrink: 0;
-        min-height: 44px;
-        white-space: nowrap;
     }
     
-    .night-tab .farsi-subtitle,
-    .special-ability-tab .farsi-subtitle {
-        font-size: 0.85em;
+    .night-player-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
     }
     
-    .night-tab-content,
-    .special-ability-tab-content {
-        padding: 15px;
-    }
-    
-    /* Buttons - full width but manageable */
-    button {
-        padding: 12px 20px;
-        font-size: 14px;
-        min-height: 48px;
-        margin: 8px 4px;
+    .method-buttons,
+    .certainty-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
     }
     
     .nav-buttons button {
         width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
-        padding: 15px 20px;
-        font-size: 15px;
+        margin: 8px 0;
+        padding: 16px 20px;
     }
     
-    .side-by-side-buttons {
-        flex-direction: row;
-        gap: 8px;
-    }
-    
-    .side-by-side-buttons button {
-        flex: 1;
-        min-width: 0;
-        max-width: none;
-        font-size: 13px;
-        padding: 12px 15px;
-    }
-    
-    /* Method and certainty buttons */
-    .method-buttons,
-    .certainty-buttons {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .method-button,
-    .certainty-button {
-        flex: 1 1 calc(50% - 8px);
-        min-width: 0;
-        padding: 12px 15px;
-        font-size: 14px;
-        min-height: 44px;
-    }
-    
-    /* Input fields */
-    input[type="text"],
-    select {
-        padding: 12px;
-        font-size: 15px;
-        min-height: 48px;
-    }
-    
-    .player-input label {
-        font-size: 13px;
-    }
-    
-    /* Stats and info boxes */
-    .game-stats-header,
-    .player-list-header,
-    .stats-display,
-    .elimination-summary,
-    .lock-ability {
-        padding: 15px;
-        font-size: 13px;
-        line-height: 1.5;
-    }
-    
-    .total-players {
-        font-size: 1.4em;
-        padding: 15px;
-        max-width: 280px;
-    }
-    
-    /* Night action blocks */
-    .night-action-block {
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-    
-    .night-action-title {
-        font-size: 1.2em;
-    }
-    
-    .player-name-display {
-        font-size: 14px;
-    }
-    
-    /* Radio items - larger touch targets */
-    .radio-item {
-        padding: 10px;
-        margin-bottom: 8px;
-    }
-    
-    .radio-item input[type="radio"] {
-        transform: scale(1.5);
-        margin-right: 10px;
-    }
-    
-    .radio-item label {
-        font-size: 14px;
-    }
-    
-    /* Player buttons */
-    .player-button {
-        padding: 12px 10px;
-        font-size: 13px;
-        min-height: 48px;
-    }
-    
-    /* Voting interface */
-    .voting-player-card {
-        padding: 15px;
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .voting-player-info {
-        width: 100%;
-        gap: 10px;
-    }
-    
-    .voting-checkbox {
-        width: 28px;
-        height: 28px;
-    }
-    
-    .voting-player-name {
-        font-size: 1.1em;
-    }
-    
-    .vote-canvas-container {
-        width: 100%;
-        height: 100px;
-        max-width: 200px;
-        align-self: center;
-    }
-    
-    .clear-canvas-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-    
-    /* Day 1 special section */
-    .day1-special {
-        padding: 12px;
-        margin: 12px 0;
-    }
-    
-    .day1-special h2 {
-        font-size: 1.1em;
-        margin-top: 8px;
-        margin-bottom: 12px;
-    }
-    
-    /* Progress indicator */
-    .progress-indicator {
-        padding: 6px 12px;
-        font-size: 11px;
-        margin-bottom: 15px;
-    }
-    
-    /* Role reveal buttons */
-    .role-reveal,
-    .role-revealed {
-        width: 110px;
-        font-size: 13px;
-        padding: 8px 12px;
-        min-height: 40px;
-    }
-    
-    /* Night history content */
-    #nightHistoryContent {
-        max-height: 65vh;
-        font-size: 14px;
-    }
-    
-    /* Game over display */
-    #winnerDisplay {
-        padding: 40px 20px;
-        margin: 20px auto;
-    }
-    
-    #winnerDisplay h1 {
-        font-size: 2.5em;
-    }
-    
-    #winMessage {
-        font-size: 1.5em;
-    }
-    
-    #finalStats {
-        font-size: 1em;
-    }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-    
-    h1 {
-        font-size: 1.6em;
-    }
-    
-    /* Force single column for very small screens where needed */
-    .role-assignments-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Stack side-by-side buttons on very small screens */
     .side-by-side-buttons {
         flex-direction: column;
     }
     
     .side-by-side-buttons button {
+        max-width: 100%;
         width: 100%;
-        max-width: 100%;
-    }
-    
-    /* Voting cards full width */
-    .voting-player-card {
-        padding: 12px;
-    }
-    
-    .vote-canvas-container {
-        max-width: 100%;
     }
 }
 
+/* DELETE the entire @media (max-width: 480px) section */
+
+
+
+
+
+ 
 
 
 
