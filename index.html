@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Embedded Web App</title>
+  <meta charset="UTF-8" />
+  <title>Framed App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
 
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .iframe-container {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      header, footer {
+        font-size: 14px;
+        padding: 0.75em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbyehwGyr30LVeto6dG3eZoPnL1afLTilYum0aeGpxRS2RL63_W_CTKl_-qNbCc-hEImeA/exec?name=RezaNazari"></iframe>
+
+  <header>
+    <h1>My Game Portal</h1>
+  </header>
+
+  <div class="iframe-container">
+    <iframe src="https://script.google.com/macros/s/AKfycbyehwGyr30LVeto6dG3eZoPnL1afLTilYum0aeGpxRS2RL63_W_CTKl_-qNbCc-hEImeA/exec?name=RezaNazari"></iframe>
+  </div>
+
+  <footer>
+    <p>© 2025 My App Company</p>
+  </footer>
+
 </body>
 </html>
-
   
 
 
