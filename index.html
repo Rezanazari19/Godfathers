@@ -2,30 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mobile-Friendly Frame</title>
+  <title>Fullscreen App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <style>
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      background-color: #f0f0f0;
-    }
-
-    header, footer {
-      background-color: #333;
-      color: white;
-      padding: 1em;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    .iframe-container {
-      flex: 1 1 auto;
-      overflow: hidden;
+      background-color: #000; /* Optional: black background behind iframe */
     }
 
     iframe {
@@ -34,21 +18,11 @@
       border: none;
       display: block;
     }
-
-    @media (max-width: 600px) {
-      header, footer {
-        font-size: 14px;
-        padding: 0.75em;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <div class="iframe-container">
-    <iframe src="https://script.google.com/macros/s/AKfycbyehwGyr30LVeto6dG3eZoPnL1afLTilYum0aeGpxRS2RL63_W_CTKl_-qNbCc-hEImeA/exec?name=RezaNazari"></iframe>
-  </div>
+  <iframe src="https://example.com"></iframe>
 
 </body>
 </html>
-
