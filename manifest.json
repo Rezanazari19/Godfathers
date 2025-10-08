@@ -1,6 +1,6 @@
 {
   "name": "The Godfathers",
-  "short_name": "Godfathers",
+  "short_name": "The Godfathers",
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -18,4 +18,5 @@
   "background_color": "#6d8799",
   "theme_color": "#6d8799"
 }
+
 
