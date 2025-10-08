@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>The Godfathers</title>
 
-  <!-- Viewport for full-screen and safe-area support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <!-- Favicons -->
@@ -12,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- iOS & Android support -->
+  <!-- iOS & Android Support -->
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180.png">
   <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,30 +23,29 @@
       height: 100%;
       margin: 0;
       background-color: #243a4f;
-      overflow: hidden; /* Prevent scrollbars */
+      overflow: hidden; /* 🔥 Prevents scrollbar */
     }
 
     .app-container {
       position: fixed;
       top: env(safe-area-inset-top);
       right: env(safe-area-inset-right);
-      bottom: 0;
+      bottom: env(safe-area-inset-bottom);
       left: env(safe-area-inset-left);
-      padding-bottom: env(safe-area-inset-bottom); /* ✅ Protect content from bottom bezel */
       background-color: #243a4f;
 
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 100%;
-      box-sizing: border-box;
     }
 
     iframe {
       width: 100%;
-      height: 95%;
+      height: 98%;
       border: none;
       display: block;
+      flex: 1;
     }
   </style>
 </head>
@@ -59,4 +57,3 @@
 
 </body>
 </html>
-
