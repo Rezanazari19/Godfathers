@@ -14,9 +14,10 @@
     }
   ],
   "start_url": "./index.html",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#6d8799",
   "theme_color": "#6d8799"
 }
+
 
 
