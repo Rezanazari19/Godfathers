@@ -55,29 +55,11 @@
     <iframe src="https://script.google.com/macros/s/AKfycbxQE3rkNjFNysF7vLvShFwOsvHOcug4Y0V9ICsmhKV8-PKeFj9_VGj2kDIjzDRGZdy2/exec?name=RezaNazari"></iframe>
   </div>
 
-  <!-- ✅ Mobile localStorage protection -->
-  <script>
-    // ✅ MOBILE FIX: Prevent iOS Safari from clearing localStorage
-    window.addEventListener('pagehide', function() {
-      console.log('Page is being hidden — saving game state if needed');
-      // Example: localStorage.setItem('autosave', JSON.stringify(currentGameState));
-    });
 
-    window.addEventListener('beforeunload', function() {
-      console.log('Page unloading — saving progress');
-      // Example: localStorage.setItem('autosave', JSON.stringify(currentGameState));
-    });
-
-    document.addEventListener('visibilitychange', function() {
-      if (document.visibilityState === 'hidden') {
-        console.log('Page hidden — backgrounding tab or app');
-        // Example: localStorage.setItem('autosave', JSON.stringify(currentGameState));
-      }
-    });
-  </script>
   
 </body>
 </html>
+
 
 
 
